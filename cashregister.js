@@ -23,8 +23,6 @@ function checkCashRegister(price, cash, cid) {
     }
     return drawerTotalNum;
   }
-  // Here is your change, ma'am.
-  //return change;
 
   var ThisIsTheDrawer = drawerTotal();
 
@@ -39,14 +37,14 @@ function checkCashRegister(price, cash, cid) {
     for (let i = 8; i >= 0; i--) {
       let j = 1;
       if (cash - price > 0) {
-        //While the cash is higher than the price
+        // While the cash is higher than the price
 
         while (cash - price >= cidNum[i] && cid[i][1] > 0) {
           cash = parseFloat(cash - cidNum[i]).toFixed(2);
           cash;
-          //Set the Word
+          // Set the Word
           change[0] = cid[i][0];
-          //Set the Number
+          // Set the Number
           change[1] = cidNum[i] * j;
 
           newChange[0] = change.slice(0);
@@ -55,7 +53,7 @@ function checkCashRegister(price, cash, cid) {
 
           j++;
         }
-        //If there's something to put in then do it
+        // If there's something to put in then do it
         if (newChange[0]) {
           changeArray.push(newChange[0]);
         }
